@@ -1,0 +1,142 @@
+
+
+
+
+
+===== LOG START 2026-03-10T21:08:56.342Z pid=28208 =====
+
+
+
+
+Starting the bot...
+2026-03-10T21:08:56.410Z  INFO  wallet address 0x43c4CB16f16399A04655b92E20Bd59c6c81dea9e
+[CLOB Client] request error {"status":400,"statusText":"Bad Request","data":{"error":"Could not create api key"},"config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"env":{},"headers":{"Accept":"*/*","Content-Type":"application/json","POLY_ADDRESS":"0x43c4CB16f16399A04655b92E20Bd59c6c81dea9e","POLY_SIGNATURE":"0xf9d43dc4c7fc0c21a36a5dd067ced9b697d7602f2bbff2391cf91d339b08dd8f607bfe1c509ba6c031fd54d9d82f56144f37093cce8ad506a42067d82bbda8c91c","POLY_TIMESTAMP":"1773176936","POLY_NONCE":"0","User-Agent":"@polymarket/clob-client","Connection":"keep-alive"},"method":"post","url":"https://clob.polymarket.com/auth/api-key","params":{}}}
+2026-03-10T21:08:56.636Z  INFO  Credential created successfully
+Credentials ready
+Approving USDC allowances to Polymarket contracts...
+2026-03-10T21:08:58.089Z  INFO  Approving USDC allowances for address: 0x43c4CB16f16399A04655b92E20Bd59c6c81dea9e, chainId: 137
+2026-03-10T21:08:58.090Z  INFO  RPC: https://rpc-mainnet.matic.quiknode.pro
+2026-03-10T21:08:58.090Z  INFO  USDC Contract: 0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174
+2026-03-10T21:08:58.091Z  INFO  ConditionalTokens Contract: 0x4D97DCd97eC945f40cF65F87097ACe5EA0476045
+2026-03-10T21:08:58.091Z  INFO  Exchange Contract: 0x4bFb41d5B3570DeFd03C39a9A4D8dE6Bd8B8982E
+2026-03-10T21:08:58.472Z  INFO  Current CTF allowance: 0, setting to MaxUint256...
+Failed to approve USDC allowances Error: insufficient funds for intrinsic transaction cost [ See: https://links.ethers.org/v5-errors-INSUFFICIENT_FUNDS ] (error={"reason":"processing response error","code":"SERVER_ERROR","body":"{\"jsonrpc\":\"2.0\",\"id\":56,\"error\":{\"code\":-32000,\"message\":\"insufficient funds for gas * price + value: balance 0, tx cost 28432626104000000, overshot 28432626104000000\"}}\n","error":{"code":-32000},"requestBody":"{\"method\":\"eth_sendRawTransaction\",\"params\":[\"0x02f8b381898085211995389885211995389883030d40942791bca1f2de4661ed88a30c99a7a9449aa8417480b844095ea7b30000000000000000000000004d97dcd97ec945f40cf65f87097ace5ea0476045ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc001a01172c0aab334eb3f83b2cff300e93d0d1a189792b59c26cff9bf9841eef5ee0fa031b26edcf77fd1a35fdc212538e3c4a8ff185faf321762a6d0b6b2af8a740baf\"],\"id\":56,\"jsonrpc\":\"2.0\"}","requestMethod":"POST","url":"https://rpc-mainnet.matic.quiknode.pro"}, method="sendTransaction", transaction="0x02f8b381898085211995389885211995389883030d40942791bca1f2de4661ed88a30c99a7a9449aa8417480b844095ea7b30000000000000000000000004d97dcd97ec945f40cf65f87097ace5ea0476045ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc001a01172c0aab334eb3f83b2cff300e93d0d1a189792b59c26cff9bf9841eef5ee0fa031b26edcf77fd1a35fdc212538e3c4a8ff185faf321762a6d0b6b2af8a740baf", code=INSUFFICIENT_FUNDS, version=providers/5.8.0)
+    at Logger.makeError (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\logger\src.ts\index.ts:269:28)
+    at Logger.throwError (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\logger\src.ts\index.ts:281:20)
+    at checkError (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\providers\src.ts\json-rpc-provider.ts:98:16)
+    at JsonRpcProvider.<anonymous> (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\providers\src.ts\json-rpc-provider.ts:642:20)
+    at step (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\providers\lib\json-rpc-provider.js:48:23)
+    at Object.throw (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\providers\lib\json-rpc-provider.js:29:53)
+    at rejected (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\providers\lib\json-rpc-provider.js:21:65)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  reason: 'insufficient funds for intrinsic transaction cost',
+  code: 'INSUFFICIENT_FUNDS',
+  error: Error: processing response error (body="{\"jsonrpc\":\"2.0\",\"id\":56,\"error\":{\"code\":-32000,\"message\":\"insufficient funds for gas * price + value: balance 0, tx cost 28432626104000000, overshot 28432626104000000\"}}\n", error={"code":-32000}, requestBody="{\"method\":\"eth_sendRawTransaction\",\"params\":[\"0x02f8b381898085211995389885211995389883030d40942791bca1f2de4661ed88a30c99a7a9449aa8417480b844095ea7b30000000000000000000000004d97dcd97ec945f40cf65f87097ace5ea0476045ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc001a01172c0aab334eb3f83b2cff300e93d0d1a189792b59c26cff9bf9841eef5ee0fa031b26edcf77fd1a35fdc212538e3c4a8ff185faf321762a6d0b6b2af8a740baf\"],\"id\":56,\"jsonrpc\":\"2.0\"}", requestMethod="POST", url="https://rpc-mainnet.matic.quiknode.pro", code=SERVER_ERROR, version=web/5.8.0)
+      at Logger.makeError (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\logger\src.ts\index.ts:269:28)
+      at Logger.throwError (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\logger\src.ts\index.ts:281:20)
+      at C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\web\src.ts\index.ts:341:28
+      at step (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\web\lib\index.js:33:23)
+      at Object.next (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\web\lib\index.js:14:53)
+      at fulfilled (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\web\lib\index.js:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5) {
+    reason: 'processing response error',
+    code: 'SERVER_ERROR',
+    body: '{"jsonrpc":"2.0","id":56,"error":{"code":-32000,"message":"insufficient funds for gas * price + value: balance 0, tx cost 28432626104000000, overshot 28432626104000000"}}\n',
+    error: Error: insufficient funds for gas * price + value: balance 0, tx cost 28432626104000000, overshot 28432626104000000
+        at getResult (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\providers\src.ts\json-rpc-provider.ts:142:28)
+        at processJsonFunc (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\web\src.ts\index.ts:383:22)
+        at C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\web\src.ts\index.ts:320:42
+        at step (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\web\lib\index.js:33:23)
+        at Object.next (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\web\lib\index.js:14:53)
+        at fulfilled (C:\Home\Dev\other\polymarket-arbitrage-gabagool-fork-5m\node_modules\@ethersproject\web\lib\index.js:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:105:5) {
+      code: -32000,
+      data: undefined
+    },
+    requestBody: '{"method":"eth_sendRawTransaction","params":["0x02f8b381898085211995389885211995389883030d40942791bca1f2de4661ed88a30c99a7a9449aa8417480b844095ea7b30000000000000000000000004d97dcd97ec945f40cf65f87097ace5ea0476045ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc001a01172c0aab334eb3f83b2cff300e93d0d1a189792b59c26cff9bf9841eef5ee0fa031b26edcf77fd1a35fdc212538e3c4a8ff185faf321762a6d0b6b2af8a740baf"],"id":56,"jsonrpc":"2.0"}',
+    requestMethod: 'POST',
+    url: 'https://rpc-mainnet.matic.quiknode.pro'
+  },
+  method: 'sendTransaction',
+  transaction: {
+    type: 2,
+    chainId: 137,
+    nonce: 0,
+    maxPriorityFeePerGas: BigNumber { _hex: '0x2119953898', _isBigNumber: true },
+    maxFeePerGas: BigNumber { _hex: '0x2119953898', _isBigNumber: true },
+    gasPrice: null,
+    gasLimit: BigNumber { _hex: '0x030d40', _isBigNumber: true },
+    to: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
+    value: BigNumber { _hex: '0x00', _isBigNumber: true },
+    data: '0x095ea7b30000000000000000000000004d97dcd97ec945f40cf65f87097ace5ea0476045ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
+    accessList: [],
+    hash: '0x23cf7c193320b3ba9b35a9cfd7cf1f7a6bad73a74bfdd0aa99cbc1affa89b752',
+    v: 1,
+    r: '0x1172c0aab334eb3f83b2cff300e93d0d1a189792b59c26cff9bf9841eef5ee0f',
+    s: '0x31b26edcf77fd1a35fdc212538e3c4a8ff185faf321762a6d0b6b2af8a740baf',
+    from: '0x43c4CB16f16399A04655b92E20Bd59c6c81dea9e',
+    confirmations: 0
+  },
+  transactionHash: '0x23cf7c193320b3ba9b35a9cfd7cf1f7a6bad73a74bfdd0aa99cbc1affa89b752'
+}
+Continuing without allowances - orders may fail
+2026-03-10T21:08:59.534Z  INFO  ═══════════════════════════════════════
+2026-03-10T21:08:59.535Z  INFO  💰 WALLET BALANCE & ALLOWANCE
+2026-03-10T21:08:59.535Z  INFO  ═══════════════════════════════════════
+2026-03-10T21:08:59.535Z  INFO  USDC Balance: 33.631489
+2026-03-10T21:08:59.536Z  INFO  USDC Allowance: 0.000000
+2026-03-10T21:08:59.536Z  INFO  Available: 33.631489 (Balance: 33.631489, Allowance: 0.000000)
+2026-03-10T21:08:59.536Z  INFO  ═══════════════════════════════════════
+2026-03-10T21:08:59.536Z  INFO  USDC gate: available=33.631489 (balance=33.631489, allowance=0.000000), required>=1
+2026-03-10T21:08:59.537Z  INFO  USDC gate passed: available=33.631489 >= 1
+waitForMinimumUsdcBalance ==> ok=true available=33.631489 allowance=0 balance=33.631489
+Wallet is funded
+Wallet balance is less than $100 USDC. Consider adding funds to avoid running out during trading.
+Skipping wait for next 15m market start (resume immediately from state)
+2026-03-10T21:08:59.539Z  INFO  Connecting to WebSocket: wss://ws-subscriptions-clob.polymarket.com/ws/market
+2026-03-10T21:08:59.610Z  INFO  WebSocket connected (market channel)
+2026-03-10T21:08:59.610Z  INFO  Subscribed to 0 token(s) for best_bid_ask updates (custom_feature_enabled: true)
+2026-03-10T21:08:59.611Z  INFO  WebSocket orderbook initialized
+2026-03-10T21:08:59.611Z  INFO  Starting CopytradeArbBot for markets: btc
+2026-03-10T21:08:59.612Z  INFO  Initializing market btc with slug btc-updown-15m-1773176400
+2026-03-10T21:08:59.851Z  INFO  Subscribed to 2 new token(s) (custom_feature_enabled: true)
+2026-03-10T21:09:00.186Z  INFO  📊 Up Ask ==========> 0.8090
+2026-03-10T21:09:00.189Z  INFO  📊 Down Ask 0.2000
+2026-03-10T21:09:00.196Z  INFO  📊 Up Ask ==========> 0.8090
+2026-03-10T21:09:00.197Z  INFO  📊 Down Ask 0.1990
+2026-03-10T21:09:00.372Z  INFO  📊 Up Ask ==========> 0.8090
+2026-03-10T21:09:00.373Z  INFO  📊 Down Ask 0.1990
+2026-03-10T21:09:00.476Z  INFO  📊 Up Ask ==========> 0.8100
+2026-03-10T21:09:00.477Z  INFO  📊 Down Ask 0.1990
+2026-03-10T21:09:00.582Z  INFO  📊 Up Ask ==========> 0.8090
+2026-03-10T21:09:00.584Z  INFO  📊 Down Ask 0.1990
+2026-03-10T21:09:00.917Z  INFO  📊 Up Ask ==========> 0.8090
+2026-03-10T21:09:00.917Z  INFO  📊 Down Ask 0.1990
+
+===== LOG END 2026-03-10T21:09:01.220Z pid=28208 =====
+
+
+
+
+
+===== LOG START 2026-03-10T21:22:21.107Z pid=4332 =====
+
+
+
+
+Starting the bot...
+2026-03-10T21:22:21.168Z  INFO  wallet address 0x43c4CB16f16399A04655b92E20Bd59c6c81dea9e
+[CLOB Client] request error {"status":400,"statusText":"Bad Request","data":{"error":"Could not create api key"},"config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"env":{},"headers":{"Accept":"*/*","Content-Type":"application/json","POLY_ADDRESS":"0x43c4CB16f16399A04655b92E20Bd59c6c81dea9e","POLY_SIGNATURE":"0x245622ed560c25ce913b67e510fbef27a0af12e53d3ea8c8ca94ca35e4869613418cbb634d263e144e0946c663c07cff8c3079626da6ea96e204889265ea5e6f1b","POLY_TIMESTAMP":"1773177741","POLY_NONCE":"0","User-Agent":"@polymarket/clob-client","Connection":"keep-alive"},"method":"post","url":"https://clob.polymarket.com/auth/api-key","params":{}}}
+2026-03-10T21:22:21.390Z  INFO  Credential created successfully
+Credentials ready
+Approving USDC allowances to Polymarket contracts...
+2026-03-10T21:22:22.745Z  INFO  Approving USDC allowances for address: 0x43c4CB16f16399A04655b92E20Bd59c6c81dea9e, chainId: 137
+2026-03-10T21:22:22.745Z  INFO  RPC: https://rpc-mainnet.matic.quiknode.pro
+2026-03-10T21:22:22.746Z  INFO  USDC Contract: 0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174
+2026-03-10T21:22:22.746Z  INFO  ConditionalTokens Contract: 0x4D97DCd97eC945f40cF65F87097ACe5EA0476045
+2026-03-10T21:22:22.747Z  INFO  Exchange Contract: 0x4bFb41d5B3570DeFd03C39a9A4D8dE6Bd8B8982E
+2026-03-10T21:22:23.127Z  INFO  Current CTF allowance: 0, setting to MaxUint256...
+2026-03-10T21:22:23.987Z  INFO  Transaction hash: 0x7260bd443aafd6f0bde4d2ea6beaf70a1108c1d46f4fa175f3a2e4e7d1b4d30c
+2026-03-10T21:22:28.473Z  INFO  ✅ USDC approved for ConditionalTokens contract
+
+===== LOG END 2026-03-10T21:22:28.631Z pid=4332 =====

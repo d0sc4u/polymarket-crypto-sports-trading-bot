@@ -1,0 +1,89 @@
+
+
+
+
+
+===== LOG START 2026-03-18T15:21:12.782Z pid=44012 =====
+
+
+
+
+[2026-03-18T15:21:12.782Z] ℹ️ INFO  Starting the bot...
+2026-03-18T15:21:12.796Z  INFO  wallet address 0x8e3A3d09804D2a9aFAb8AeE5673ea0F3c9899c8b
+2026-03-18T15:21:14.314Z  INFO  Credential created successfully
+[2026-03-18T15:21:14.315Z] ℹ️ INFO  Credentials ready
+[2026-03-18T15:21:14.324Z] ℹ️ INFO  Approving USDC allowances to Polymarket contracts...
+2026-03-18T15:21:28.926Z  INFO  Approving USDC allowances for address: 0x8e3A3d09804D2a9aFAb8AeE5673ea0F3c9899c8b, chainId: 137
+2026-03-18T15:21:28.926Z  INFO  RPC: https://rpc-mainnet.matic.quiknode.pro
+2026-03-18T15:21:28.926Z  INFO  USDC Contract: 0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174
+2026-03-18T15:21:28.927Z  INFO  ConditionalTokens Contract: 0x4D97DCd97eC945f40cF65F87097ACe5EA0476045
+2026-03-18T15:21:28.927Z  INFO  Exchange Contract: 0x4bFb41d5B3570DeFd03C39a9A4D8dE6Bd8B8982E
+2026-03-18T15:21:30.324Z  INFO  Current CTF allowance: 0, setting to MaxUint256...
+[2026-03-18T15:21:33.532Z] ℹ️ INFO  Failed to approve USDC allowances Error: insufficient funds for intrinsic transaction cost [ See: https://links.ethers.org/v5-errors-INSUFFICIENT_FUNDS ] (error={"reason":"processing response error","code":"SERVER_ERROR","body":"{\"jsonrpc\":\"2.0\",\"id\":56,\"error\":{\"code\":-32000,\"message\":\"insufficient funds for gas * price + value: balance 0, tx cost 38689834443600000, overshot 38689834443600000\"}}\n","error":{"code":-32000},"requestBody":"{\"method\":\"eth_sendRawTransaction\",\"params\":[\"0x02f8b3818980852d0a781cfa852d0a781cfa83030d40942791bca1f2de4661ed88a30c99a7a9449aa8417480b844095ea7b30000000000000000000000004d97dcd97ec945f40cf65f87097ace5ea0476045ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc001a07ee7226d6bd7bb995143b638f0063cc57d31f500062d1454466a7368fd4bb3b9a00c82ac08f3cc718e15385fb2862cf15bc7101e306083f05dfa6c4d5438da3004\"],\"id\":56,\"jsonrpc\":\"2.0\"}","requestMethod":"POST","url":"https://rpc-mainnet.matic.quiknode.pro"}, method="sendTransaction", transaction="0x02f8b3818980852d0a781cfa852d0a781cfa83030d40942791bca1f2de4661ed88a30c99a7a9449aa8417480b844095ea7b30000000000000000000000004d97dcd97ec945f40cf65f87097ace5ea0476045ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc001a07ee7226d6bd7bb995143b638f0063cc57d31f500062d1454466a7368fd4bb3b9a00c82ac08f3cc718e15385fb2862cf15bc7101e306083f05dfa6c4d5438da3004", code=INSUFFICIENT_FUNDS, version=providers/5.8.0)
+    at Logger.makeError (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\logger\src.ts\index.ts:269:28)
+    at Logger.throwError (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\logger\src.ts\index.ts:281:20)
+    at checkError (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\providers\src.ts\json-rpc-provider.ts:98:16)
+    at JsonRpcProvider.<anonymous> (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\providers\src.ts\json-rpc-provider.ts:642:20)
+    at step (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\providers\lib\json-rpc-provider.js:48:23)
+    at Object.throw (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\providers\lib\json-rpc-provider.js:29:53)
+    at rejected (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\providers\lib\json-rpc-provider.js:21:65)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  reason: 'insufficient funds for intrinsic transaction cost',
+  code: 'INSUFFICIENT_FUNDS',
+  error: Error: processing response error (body="{\"jsonrpc\":\"2.0\",\"id\":56,\"error\":{\"code\":-32000,\"message\":\"insufficient funds for gas * price + value: balance 0, tx cost 38689834443600000, overshot 38689834443600000\"}}\n", error={"code":-32000}, requestBody="{\"method\":\"eth_sendRawTransaction\",\"params\":[\"0x02f8b3818980852d0a781cfa852d0a781cfa83030d40942791bca1f2de4661ed88a30c99a7a9449aa8417480b844095ea7b30000000000000000000000004d97dcd97ec945f40cf65f87097ace5ea0476045ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc001a07ee7226d6bd7bb995143b638f0063cc57d31f500062d1454466a7368fd4bb3b9a00c82ac08f3cc718e15385fb2862cf15bc7101e306083f05dfa6c4d5438da3004\"],\"id\":56,\"jsonrpc\":\"2.0\"}", requestMethod="POST", url="https://rpc-mainnet.matic.quiknode.pro", code=SERVER_ERROR, version=web/5.8.0)
+      at Logger.makeError (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\logger\src.ts\index.ts:269:28)
+      at Logger.throwError (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\logger\src.ts\index.ts:281:20)
+      at C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\web\src.ts\index.ts:341:28
+      at step (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\web\lib\index.js:33:23)
+      at Object.next (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\web\lib\index.js:14:53)
+      at fulfilled (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\web\lib\index.js:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:104:5) {
+    reason: 'processing response error',
+    code: 'SERVER_ERROR',
+    body: '{"jsonrpc":"2.0","id":56,"error":{"code":-32000,"message":"insufficient funds for gas * price + value: balance 0, tx cost 38689834443600000, overshot 38689834443600000"}}\n',
+    error: Error: insufficient funds for gas * price + value: balance 0, tx cost 38689834443600000, overshot 38689834443600000
+        at getResult (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\providers\src.ts\json-rpc-provider.ts:142:28)
+        at processJsonFunc (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\web\src.ts\index.ts:383:22)
+        at C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\web\src.ts\index.ts:320:42
+        at step (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\web\lib\index.js:33:23)
+        at Object.next (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\web\lib\index.js:14:53)
+        at fulfilled (C:\Users\user\Documents\Polymarket-Arbitrage-Trading-Bot\node_modules\@ethersproject\web\lib\index.js:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:104:5) {
+      code: -32000,
+      data: undefined
+    },
+    requestBody: '{"method":"eth_sendRawTransaction","params":["0x02f8b3818980852d0a781cfa852d0a781cfa83030d40942791bca1f2de4661ed88a30c99a7a9449aa8417480b844095ea7b30000000000000000000000004d97dcd97ec945f40cf65f87097ace5ea0476045ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc001a07ee7226d6bd7bb995143b638f0063cc57d31f500062d1454466a7368fd4bb3b9a00c82ac08f3cc718e15385fb2862cf15bc7101e306083f05dfa6c4d5438da3004"],"id":56,"jsonrpc":"2.0"}',
+    requestMethod: 'POST',
+    url: 'https://rpc-mainnet.matic.quiknode.pro'
+  },
+  method: 'sendTransaction',
+  transaction: {
+    type: 2,
+    chainId: 137,
+    nonce: 0,
+    maxPriorityFeePerGas: BigNumber { _hex: '0x2d0a781cfa', _isBigNumber: true },
+    maxFeePerGas: BigNumber { _hex: '0x2d0a781cfa', _isBigNumber: true },
+    gasPrice: null,
+    gasLimit: BigNumber { _hex: '0x030d40', _isBigNumber: true },
+    to: '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174',
+    value: BigNumber { _hex: '0x00', _isBigNumber: true },
+    data: '0x095ea7b30000000000000000000000004d97dcd97ec945f40cf65f87097ace5ea0476045ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
+    accessList: [],
+    hash: '0x6a2fc5cc9446ba39c394f0596ca3a29b65623775705f6784a48ce956353305d9',
+    v: 1,
+    r: '0x7ee7226d6bd7bb995143b638f0063cc57d31f500062d1454466a7368fd4bb3b9',
+    s: '0x0c82ac08f3cc718e15385fb2862cf15bc7101e306083f05dfa6c4d5438da3004',
+    from: '0x8e3A3d09804D2a9aFAb8AeE5673ea0F3c9899c8b',
+    confirmations: 0
+  },
+  transactionHash: '0x6a2fc5cc9446ba39c394f0596ca3a29b65623775705f6784a48ce956353305d9'
+}
+[2026-03-18T15:21:33.560Z] ℹ️ INFO  Continuing without allowances - orders may fail
+2026-03-18T15:21:35.846Z  INFO  ═══════════════════════════════════════
+2026-03-18T15:21:35.847Z  INFO  💰 WALLET BALANCE & ALLOWANCE
+2026-03-18T15:21:35.855Z  INFO  ═══════════════════════════════════════
+2026-03-18T15:21:35.856Z  INFO  USDC Balance: 0.000000
+2026-03-18T15:21:35.858Z  INFO  USDC Allowance: 0.000000
+2026-03-18T15:21:35.860Z  INFO  Available: 0.000000 (Balance: 0.000000, Allowance: 0.000000)
+2026-03-18T15:21:35.861Z  INFO  ═══════════════════════════════════════
+2026-03-18T15:21:35.862Z  INFO  USDC gate: available=0.000000 (balance=0.000000, allowance=0.000000), required>=1
